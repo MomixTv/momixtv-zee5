@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MOMIXTV</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+  <style>
+    body {
+      margin: 0px;
+    }
+    .jwplayer {
+      position: absolute !important;
+    }
+    .jwplayer.jw-flag-aspect-mode {
+      min-height: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Show confirmation dialog to join Telegram channel
+    if (confirm("Join Our Telegram Channel @MomixTv")) {
+      window.location.href = "https://t.me/momixtv";
+    }
+
+    // Allowed domain
+    var allowedDomain = "momixtv.github.io";
+
+    // Check current domain
+    var currentDomain = window.location.hostname;
+
+    // Redirect if the current domain doesn't match the allowed domain
+    if (currentDomain !== allowedDomain) {
+      window.location.href = "https://telegram.me/momixtv"; // Redirect to your preferred URL
+    }
+
+    // JWPlayer setup
+    document.addEventListener("DOMContentLoaded", function() {
+      jwplayer("jwplayerDiv").setup({
+        file: "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeebanglahd1/default/zeebanglahd1.m3u8",
+        autostart: true,
+        width: "100%",
+        type: "hls",
+        logo: {
+          file: "https://i.postimg.cc/SRLhHQGy/photo-2024-05-18-16-43-58-removebg-preview.png",
+          hide: false,
+          position: "top-left",
+          margin: "15",
+          link: "https://t.me/momixtv"
+        }
+      });
+    });
+  </script>
+
+  <div id="jwplayerDiv"></div>
+  
+  <script disable-devtool-auto='true' src='https://cdn.jsdelivr.net/npm/disable-devtool' clear-log='true' disable-select='true' disable-copy='true' disable-cut='true' disable-paste='true'></script>
+</body>
+</html>
